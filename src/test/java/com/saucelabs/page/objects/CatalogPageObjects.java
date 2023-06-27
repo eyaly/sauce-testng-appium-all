@@ -1,4 +1,4 @@
-package page.objects;
+package com.saucelabs.page.objects;
 
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;

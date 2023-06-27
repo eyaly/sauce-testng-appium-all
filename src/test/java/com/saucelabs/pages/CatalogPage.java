@@ -1,9 +1,7 @@
 package com.saucelabs.pages;
 
 import com.saucelabs.manager.AppiumDriverManager;
-import com.saucelabs.tests.BaseTest;
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
@@ -13,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
-import page.objects.CatalogPageObjects;
+import com.saucelabs.page.objects.CatalogPageObjects;
 
 import java.time.Duration;
 
