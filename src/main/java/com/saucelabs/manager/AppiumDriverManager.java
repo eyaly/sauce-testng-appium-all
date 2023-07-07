@@ -38,7 +38,6 @@ public class AppiumDriverManager {
     private AppiumDriver createAppiumDriver(MutableCapabilities capabilities, URL url)
             throws IOException, MalformedURLException {
         AppiumDriver currentDriverSession;
-//        URL url = new URL("https://ondemand.eu-central-1.saucelabs.com:443/wd/hub");
         String strMobilePlatform = capabilities.getCapability("platformName").toString();
         switch (strMobilePlatform.toLowerCase()) {
             case "ios":

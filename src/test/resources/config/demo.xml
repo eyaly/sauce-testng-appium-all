@@ -12,7 +12,6 @@
 		<classes>
 			<class name="com.saucelabs.tests.DemoAppTest"/>
 			<class name="com.saucelabs.tests.DemoAppTest2"/>
-			<class name="com.saucelabs.tests.DemoAppTest3"/>
 		</classes>
 	</test>
 
@@ -26,7 +25,6 @@
 		<classes>
 			<class name="com.saucelabs.tests.DemoAppTest"/>
 			<class name="com.saucelabs.tests.DemoAppTest2"/>
-			<class name="com.saucelabs.tests.DemoAppTest3"/>
 		</classes>
 	</test>
 
@@ -40,35 +38,20 @@
 		<classes>
 			<class name="com.saucelabs.tests.DemoAppTest"/>
 			<class name="com.saucelabs.tests.DemoAppTest2"/>
-			<class name="com.saucelabs.tests.DemoAppTest3"/>
 		</classes>
 	</test>
 
-<!--	<test name="iOS Simulator App test" parallel="methods" enabled="true">-->
-<!--		<parameter name="rdc" value="false"></parameter>-->
-<!--		<parameter name="deviceName" value="iPhone Instant Simulator"></parameter>-->
-<!--		<parameter name="platformVersion" value="current_major"></parameter>-->
-<!--&lt;!&ndash;		<parameter name="appiumVersion" value="2.0.0-beta56"></parameter>&ndash;&gt;-->
-<!--		<parameter name="app" value="SauceLabs-Demo-App.Simulator.zip"></parameter>-->
-<!--		<classes>-->
-<!--			<class name="sauce.demo.tests.ios.DemoAppTest"/>-->
-<!--		</classes>-->
-<!--	</test>-->
-
-<!--	<test name="Android Emulator App test" parallel="methods" enabled="false">-->
-<!--		<parameter name="rdc" value="false"></parameter>-->
-<!--		<parameter name="deviceName" value="Android GoogleAPI Emulator"></parameter>-->
-<!--		<parameter name="platformVersion" value="13.0"></parameter>-->
-<!--		<parameter name="appiumVersion" value="2.0.0-beta56"></parameter>-->
-<!--		<parameter name="app" value="my-demo-app-android.apk"></parameter>-->
-<!--		<classes>-->
-<!--			<class name="sauce.demo.tests.android.DemoAppTest">-->
-<!--				<methods>-->
-<!--					<exclude name="addBikeLightProductToCart" />-->
-<!--				</methods>-->
-<!--			</class>-->
-
-<!--		</classes>-->
-<!--	</test>-->
+	<test name="iOS Simulator App test" parallel="methods" enabled="true">
+		<parameter name="platformName" value="iOS"></parameter>
+		<parameter name="appium:automationName" value="XCuiTest"></parameter>
+		<parameter name="appium:deviceName" value="iPhone Instant Simulator"></parameter>
+		<parameter name="appium:platformVersion" value="current_major"></parameter>
+		<!--		<parameter name="appiumVersion" value="2.0.0"></parameter>-->
+		<parameter name="appium:app" value="storage:filename=SauceLabs-Demo-App.Simulator.zip"></parameter>
+		<classes>
+			<class name="com.saucelabs.tests.DemoAppTest"/>
+			<class name="com.saucelabs.tests.DemoAppTest2"/>
+		</classes>
+	</test>
 
 </suite>

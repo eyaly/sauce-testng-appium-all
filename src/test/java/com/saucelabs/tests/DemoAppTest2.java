@@ -13,7 +13,6 @@ public class DemoAppTest2 extends BaseTest {
 
     public DemoAppTest2() {
         super();
-        System.out.println("EYAL2. MAYA2");
     }
 
     @Test
@@ -38,7 +37,6 @@ public class DemoAppTest2 extends BaseTest {
 //        WebElement itemInCart = getItemInTheCart();
 //        Assert.assertTrue(itemInCart !=null);
 //        // For the video
-        waiting(5);
 
     }
 
