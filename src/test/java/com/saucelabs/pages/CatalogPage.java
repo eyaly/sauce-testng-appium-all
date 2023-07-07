@@ -43,9 +43,7 @@ public class CatalogPage extends AppPage{
         wait.until(ExpectedConditions.visibilityOf(catalogPageObjects.productsTitle));
 
         // Select product
-        String platformName = driver.getCapabilities().getPlatformName().toString();
-        logger.info("Sauce - platform is " + platformName);
-        if (platformName.toLowerCase().equals("android" ))
+        if (isAndroid() )
         {
             (catalogPageObjects.productsItems).get(0).click();
         } else
