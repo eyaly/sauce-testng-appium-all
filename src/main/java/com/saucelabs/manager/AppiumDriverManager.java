@@ -13,10 +13,12 @@ import org.slf4j.LoggerFactory;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.concurrent.atomic.AtomicInteger;
 
 
 public class AppiumDriverManager {
     private static ThreadLocal<AppiumDriver> appiumDriver = new ThreadLocal<>();
+    private static AtomicInteger appiumThreadCount = new AtomicInteger(0);
     private static final Logger logger = LoggerFactory.getLogger(AppiumDriverManager.class.getName());
 
     public static AppiumDriver getDriver() {
@@ -29,13 +31,14 @@ public class AppiumDriverManager {
         capabilities.getCapabilityNames().forEach(key -> logger.info("\t" + key
                 + ":: " + capabilities.getCapability(key)));
         appiumDriver.set(driver);
+        appiumThreadCount.incrementAndGet();
     }
 
 
-    private AppiumDriver createAppiumDriver(MutableCapabilities capabilities, URL url1)
+    private AppiumDriver createAppiumDriver(MutableCapabilities capabilities, URL url)
             throws IOException, MalformedURLException {
         AppiumDriver currentDriverSession;
-        URL url = new URL("https://ondemand.eu-central-1.saucelabs.com:443/wd/hub");
+//        URL url = new URL("https://ondemand.eu-central-1.saucelabs.com:443/wd/hub");
         String strMobilePlatform = capabilities.getCapability("platformName").toString();
         switch (strMobilePlatform.toLowerCase()) {
             case "ios":
@@ -49,6 +52,7 @@ public class AppiumDriverManager {
         }
         logger.info("Session Created for " + "\n\tSession Id: " + currentDriverSession.getSessionId()
                 + "\n\tUDID: " + currentDriverSession.getCapabilities().getCapability("deviceName"));
+
         return currentDriverSession;
     }
 
@@ -69,6 +73,11 @@ public class AppiumDriverManager {
                     + AppiumDriverManager.getDriver().getSessionId() + "---"
                     + AppiumDriverManager.getDriver().getCapabilities().getCapability("udid"));
             AppiumDriverManager.getDriver().quit();
+            appiumThreadCount.decrementAndGet();
         }
+    }
+
+    public static int getThreadCount() {
+        return appiumThreadCount.get();
     }
 }

@@ -2,40 +2,25 @@ package com.saucelabs.tests;
 
 import com.saucelabs.manager.AppiumDriverManager;
 import com.saucelabs.pages.CatalogPage;
-import io.appium.java_client.AppiumBy;
-import io.appium.java_client.ios.IOSDriver;
-import org.openqa.selenium.*;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.testng.Assert;
-import org.testng.ITestResult;
-import org.testng.Reporter;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.lang.reflect.Method;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.time.Duration;
+public class DemoAppTest2 extends BaseTest {
 
-public class DemoAppTest extends BaseTest {
-
-    private static final Logger logger = LoggerFactory.getLogger(DemoAppTest.class.getName());
+    private static final Logger logger = LoggerFactory.getLogger(DemoAppTest2.class.getName());
     CatalogPage catalogPage;
 
-    public DemoAppTest() {
+    public DemoAppTest2() {
         super();
-        System.out.println("EYAL. MAYA");
+        System.out.println("EYAL2. MAYA2");
     }
 
     @Test
-    public void addProductToCart() {
+    public void addProductToCart2() {
 
         catalogPage = new CatalogPage(AppiumDriverManager.getDriver());
-        System.out.println("Waiting...");
+        System.out.println("Waiting2...");
         waiting(20);
         catalogPage.addProductToCart();
 

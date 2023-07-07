@@ -23,7 +23,15 @@ public class CatalogPage extends AppPage{
 
     public CatalogPage(AppiumDriver driver) {
         super(driver);
-        PageFactory.initElements(new AppiumFieldDecorator(driver), catalogPageObjects);
+        System.out.println("EYAL - In CatalogPage Ctr ");
+        PageFactory.initElements(new AppiumFieldDecorator(getDriver()), catalogPageObjects);
+//        PageFactory.initElements(driver, this);
+        System.out.println("EYAL - In CatalogPage Ctr. AFTER ");
+    }
+
+    public void selectProduct(String productName) {
+        logger.info("Sauce - selectProduct");
+        AppiumDriver driver = AppiumDriverManager.getDriver();
     }
 
     public void addProductToCart() {

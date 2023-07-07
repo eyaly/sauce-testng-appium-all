@@ -11,10 +11,12 @@
 		<parameter name="appium:app" value="storage:filename=SauceLabs-Demo-App.ipa"></parameter>
 		<classes>
 			<class name="com.saucelabs.tests.DemoAppTest"/>
+			<class name="com.saucelabs.tests.DemoAppTest2"/>
+			<class name="com.saucelabs.tests.DemoAppTest3"/>
 		</classes>
 	</test>
 
-	<test name="Android RDC App test" parallel="methods" enabled="true">
+	<test name="Android RDC App test 13" parallel="methods" enabled="true">
 	<parameter name="platformName" value="Android"></parameter>
 	<parameter name="appium:automationName" value="UIAutomator2"></parameter>
 	<parameter name="appium:deviceName" value="Samsung.*"></parameter>
@@ -23,6 +25,22 @@
 	<parameter name="app" value="storage:filename=my-demo-app-android.apk"></parameter>
 		<classes>
 			<class name="com.saucelabs.tests.DemoAppTest"/>
+			<class name="com.saucelabs.tests.DemoAppTest2"/>
+			<class name="com.saucelabs.tests.DemoAppTest3"/>
+		</classes>
+	</test>
+
+	<test name="Android RDC App test 12" parallel="methods" enabled="true">
+		<parameter name="platformName" value="Android"></parameter>
+		<parameter name="appium:automationName" value="UIAutomator2"></parameter>
+		<parameter name="appium:deviceName" value="Samsung.*"></parameter>
+		<parameter name="appium:platformVersion" value="12"></parameter>
+		<!--	<parameter name="appiumVersion" value="2.0.0"></parameter>-->
+		<parameter name="app" value="storage:filename=my-demo-app-android.apk"></parameter>
+		<classes>
+			<class name="com.saucelabs.tests.DemoAppTest"/>
+			<class name="com.saucelabs.tests.DemoAppTest2"/>
+			<class name="com.saucelabs.tests.DemoAppTest3"/>
 		</classes>
 	</test>
 
