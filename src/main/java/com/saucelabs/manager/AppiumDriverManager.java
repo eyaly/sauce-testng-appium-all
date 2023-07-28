@@ -15,7 +15,6 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.atomic.AtomicInteger;
 
-
 public class AppiumDriverManager {
     private static ThreadLocal<AppiumDriver> appiumDriver = new ThreadLocal<>();
     private static AtomicInteger appiumThreadCount = new AtomicInteger(0);

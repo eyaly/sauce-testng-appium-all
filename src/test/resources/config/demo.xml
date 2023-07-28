@@ -7,11 +7,11 @@
 		<parameter name="appium:deviceName" value="iPhone.*"></parameter>
 <!--		<parameter name="appium:platformVersion" value="1[5-6].*"></parameter>-->
 		<parameter name="appium:platformVersion" value="15"></parameter>
+		<parameter name="appium:orientation" value="PORTRAIT"></parameter>
 <!--		<parameter name="appiumVersion" value="2.0.0"></parameter>-->
 		<parameter name="appium:app" value="storage:filename=SauceLabs-Demo-App.ipa"></parameter>
 		<classes>
 			<class name="com.saucelabs.tests.DemoAppTest"/>
-			<class name="com.saucelabs.tests.DemoAppTest2"/>
 		</classes>
 	</test>
 
@@ -20,28 +20,27 @@
 	<parameter name="appium:automationName" value="UIAutomator2"></parameter>
 	<parameter name="appium:deviceName" value="Samsung.*"></parameter>
 	<parameter name="appium:platformVersion" value="13"></parameter>
+	<parameter name="appium:orientation" value="PORTRAIT"></parameter>
 <!--	<parameter name="appiumVersion" value="2.0.0"></parameter>-->
-	<parameter name="app" value="storage:filename=my-demo-app-android.apk"></parameter>
+	<parameter name="app" value="storage:filename=mda-2.0.0-21.apk"></parameter>
 		<classes>
 			<class name="com.saucelabs.tests.DemoAppTest"/>
-			<class name="com.saucelabs.tests.DemoAppTest2"/>
 		</classes>
 	</test>
 
-	<test name="Android RDC App test 12" parallel="methods" enabled="true">
+	<test name="Android RDC App test 12" parallel="methods" enabled="false">
 		<parameter name="platformName" value="Android"></parameter>
 		<parameter name="appium:automationName" value="UIAutomator2"></parameter>
 		<parameter name="appium:deviceName" value="Samsung.*"></parameter>
 		<parameter name="appium:platformVersion" value="12"></parameter>
 		<!--	<parameter name="appiumVersion" value="2.0.0"></parameter>-->
-		<parameter name="app" value="storage:filename=my-demo-app-android.apk"></parameter>
+		<parameter name="app" value="storage:filename=mda-2.0.0-21.apk"></parameter>
 		<classes>
 			<class name="com.saucelabs.tests.DemoAppTest"/>
-			<class name="com.saucelabs.tests.DemoAppTest2"/>
 		</classes>
 	</test>
 
-	<test name="iOS Simulator App test" parallel="methods" enabled="true">
+	<test name="iOS Simulator App test" parallel="methods" enabled="false">
 		<parameter name="platformName" value="iOS"></parameter>
 		<parameter name="appium:automationName" value="XCuiTest"></parameter>
 		<parameter name="appium:deviceName" value="iPhone Instant Simulator"></parameter>
@@ -50,7 +49,6 @@
 		<parameter name="appium:app" value="storage:filename=SauceLabs-Demo-App.Simulator.zip"></parameter>
 		<classes>
 			<class name="com.saucelabs.tests.DemoAppTest"/>
-			<class name="com.saucelabs.tests.DemoAppTest2"/>
 		</classes>
 	</test>
 

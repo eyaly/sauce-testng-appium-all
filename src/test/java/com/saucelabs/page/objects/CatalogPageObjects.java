@@ -9,9 +9,12 @@ import java.util.List;
 
 public class CatalogPageObjects {
 
-    @iOSXCUITFindBy(accessibility = "Sauce Lab Back Packs")
+    @iOSXCUITFindBy(accessibility = "Sauce Labs Backpack")
     public WebElement productBackPack;
 
+    @iOSXCUITFindBy(className = "XCUIElementTypeCollectionView")
+    @AndroidFindBy(id = "com.saucelabs.mydemoapp.android:id/productRV")
+    public WebElement allProductsOfCatalog;
 
     @AndroidFindBy(id = "com.saucelabs.mydemoapp.android:id/productIV")
     public List<WebElement> productsItems;
@@ -19,18 +22,6 @@ public class CatalogPageObjects {
     @iOSXCUITFindBy(accessibility = "Products")
     @AndroidFindBy(id = "com.saucelabs.mydemoapp.android:id/productTV")
     public WebElement productsTitle;
-
-    @iOSXCUITFindBy(accessibility = "ProductDetails-screen")
-    @AndroidFindBy(accessibility = "Container for fragments")
-    public WebElement productDetailsScreen;
-
-    @iOSXCUITFindBy(accessibility = "Add To Cart")
-    @AndroidFindBy(accessibility = "Tap to add product to cart")
-    public WebElement addToCart;
-
-    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"1\"]")
-    @AndroidFindBy(id = "com.saucelabs.mydemoapp.android:id/cartTV")
-    public WebElement CartOneItem;
 
 //    By productBackPack =  AppiumBy.accessibilityId("Sauce Lab Back Packs");
 //    By productsTitle =  AppiumBy.accessibilityId("Products");
