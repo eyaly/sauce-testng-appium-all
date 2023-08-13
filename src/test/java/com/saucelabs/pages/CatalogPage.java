@@ -28,7 +28,6 @@ public class CatalogPage extends AppPage{
 
     public void selectProduct(String productName) {
         logger.info("Sauce - selectProduct: " + productName);
-        AppiumDriver driver = AppiumDriverManager.getDriver();
         WebElement productToSelect = null;
         try {
             productToSelect = swipeTillProductVisible(productName, catalogPageObjects.allProductsOfCatalog, "up", 2);
@@ -64,45 +63,5 @@ public class CatalogPage extends AppPage{
         logger.info("Couldn't find the element after " + count + " scrolls");
         return null; //couldn't find the element
     }
-
-//
-//    public void addProductToCart() {
-//
-//        logger.info("Sauce - addProductToCart");
-//
-//        AppiumDriver driver = AppiumDriverManager.getDriver();
-//
-//        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-//        wait.until(ExpectedConditions.visibilityOf(catalogPageObjects.productsTitle));
-//
-//        // Select product
-//        if (isAndroid() )
-//        {
-//            (catalogPageObjects.productsItems).get(0).click();
-//        } else
-//        {
-//            (catalogPageObjects.productBackPack).click();
-//        }
-//        wait.until(ExpectedConditions.visibilityOf(catalogPageObjects.productDetailsScreen));
-//
-//        // Add to Cart
-//        (catalogPageObjects.addToCart).click();
-//
-//        WebElement itemInCart = getItemInTheCart(driver);
-//        Assert.assertTrue(itemInCart !=null);
-//
-//    }
-
-//    private WebElement getItemInTheCart(AppiumDriver driver) {
-//
-//        WebElement itemInTheCart = null;
-//        //wait for the product field to be visible and store that element into a variable
-//        try {
-//            itemInTheCart = catalogPageObjects.CartOneItem;
-//        } catch (TimeoutException e){
-//            return null;
-//        }
-//        return itemInTheCart;
-//    }
 
 }

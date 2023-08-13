@@ -17,4 +17,8 @@ public class ProductDetailsPageObjects {
     @AndroidFindBy(accessibility = "Tap to add product to cart")
     public WebElement addToCart;
 
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name=\"AddToCart\"]/../XCUIElementTypeStaticText[1]")
+    @AndroidFindBy(id = "com.saucelabs.mydemoapp.android:id/productTV")
+    public WebElement productTitle;
+
 }

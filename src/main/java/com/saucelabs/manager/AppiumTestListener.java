@@ -78,8 +78,8 @@ public final class AppiumTestListener implements ITestListener {
             }
         }
 
-        sauceOptions.setCapability("username", System.getenv("SAUCE_USERNAME"));
-        sauceOptions.setCapability("accessKey", System.getenv("SAUCE_ACCESS_KEY"));
+        sauceOptions.setCapability("username", SAUCE_USERNAME);
+        sauceOptions.setCapability("accessKey", SAUCE_ACCESS_KEY);
         sauceOptions.setCapability("name", methodName);
 
         if (!isBuildCap) { //handle build cap

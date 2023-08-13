@@ -40,4 +40,12 @@ public class ProductDetailsPage extends AppPage{
         (productDetailsPageObjects.addToCart).click();
 
     }
+
+    public String getProductTitle(){
+        logger.info("Sauce - getProductTitle");
+        if (isAndroid())
+            return productDetailsPageObjects.productTitle.getText();
+        else
+            return productDetailsPageObjects.productTitle.getAttribute("value");
+    }
 }

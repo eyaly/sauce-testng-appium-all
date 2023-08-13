@@ -23,10 +23,4 @@ public class CatalogPageObjects {
     @AndroidFindBy(id = "com.saucelabs.mydemoapp.android:id/productTV")
     public WebElement productsTitle;
 
-//    By productBackPack =  AppiumBy.accessibilityId("Sauce Lab Back Packs");
-//    By productsTitle =  AppiumBy.accessibilityId("Products");
-
-//    By productDetailsScreen = AppiumBy.accessibilityId("ProductDetails-screen");
-//    By addToCart = AppiumBy.accessibilityId("Add To Cart");
-//    By.ByXPath CartOneItem =  new By.ByXPath("//XCUIElementTypeStaticText[@name=\"1\"]");
 }
