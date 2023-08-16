@@ -1,6 +1,5 @@
 # Mobile testing w/ Appium + Java
-
-Mobile automated testing using Appium and Java.    
+ 
 Cross-platform mobile automation using Page Object Model (POM) with AppiumFieldDecorator
 ---
 ## Once upon a time…    
@@ -9,7 +8,7 @@ This workshop was led by Sai Krishna and Srinivasan Sekar.
 It was a great workshop, and I learned a lot from it.    
 One of the topics in this workshop was about how to run the same test for a native app on both Android and iOS OS (Operating System).   
 Sai and Srinivasan shared these repositories that helped me to develop this framework:
-[AppiumTestDistribution](https://github.com/AppiumTestDistribution/AppiumTestDistribution) and    
+[AppiumTestDistribution](https://github.com/AppiumTestDistribution/AppiumTestDistribution) and 
 [PageObjectPatternAppium](https://github.com/AppiumTestDistribution/PageObjectPatternAppium)
 
 ### The main challenges
@@ -107,6 +106,19 @@ storage by doing the following from the folder `appium-app-examples`:
     cd src/test/java/sauce/demo/helpers/
     ./push_apps_to_storage.sh
 
+## Run yours tests
+I use the [testNG xml](src/test/resources/config/demo.xml/)-file to define all the needed information of running the tests.    
+This includes: the Appium capabilities for the Android and iOS devices, the classes to run and parallel execution settings.
+
+Run the tests:
+
+```java
+        // If using the US DC
+        mvn clean test -Dregion=us
+
+        // If using the EU DC
+        mvn clean test -Dregion=eu
+```
 
 ## Extra resources
 
