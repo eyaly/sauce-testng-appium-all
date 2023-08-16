@@ -123,4 +123,4 @@ Run the tests:
 ## Extra resources
 
 - [Appium options for sauce](https://docs.saucelabs.com/dev/test-configuration-options/#mobile-app-appium-capabilities-required)
-- [All appium capabilities](https://appium.io/docs/en/writing-running-appium/caps/)
+- [Appium 2 docs](http://appium.io/docs/en/2.0/)
