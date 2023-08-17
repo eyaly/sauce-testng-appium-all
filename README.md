@@ -106,7 +106,7 @@ storage by doing the following from the folder `appium-app-examples`:
     cd src/test/java/sauce/demo/helpers/
     ./push_apps_to_storage.sh
 
-## Run yours tests
+## Run your tests
 I use the [testNG xml](src/test/resources/config/demo.xml/)-file to define all the needed information of running the tests.    
 This includes: the Appium capabilities for the Android and iOS devices, the classes to run and parallel execution settings.
 
